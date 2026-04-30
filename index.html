@@ -11,6 +11,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Custom style to center and size the creator image appropriately */
+			.creator-image-wrapper {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1.5em;
+			}
+			.creator-image-wrapper .image {
+				display: block;
+				width: 280px; /* Reasonable fixed size */
+				max-width: 80%;
+				margin: 0 auto;
+				border-radius: 50%; /* Optional: makes it a nice circular headshot, consistent with many portfolio sites */
+				overflow: hidden;
+				box-shadow: 0 0 0 0.25rem rgba(144, 144, 144, 0.25);
+			}
+			.creator-image-wrapper .image img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			/* Adjust the features list to not have empty items breaking layout, but maintain structure */
+			.features {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.features li {
+				text-align: center;
+			}
+			/* Ensure empty list items don't take up extra space but keep original markup intact */
+			.features li:first-child, .features li:last-child {
+				flex: 0 0 0;
+				visibility: hidden;
+				display: none;
+			}
+			.features li:nth-child(2) {
+				flex: 1;
+				max-width: 400px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -65,8 +106,10 @@
 										<p></p>
 									</li>
 									<li>
-										<!-- FIXED: Added missing file extension to make image visible -->
-										<span class="image"><img src="images/IMG_7481.jpg" alt="Samuel Perry - Creator of Sneaky McGee" /></span>
+										<!-- Centered and reasonably sized image wrapper -->
+										<div class="creator-image-wrapper">
+											<span class="image"><img src="images/IMG_7481.jpg" alt="Samuel Perry - Creator of Sneaky McGee" /></span>
+										</div>
 										<h3>Howdy Howdy!</h3>
 										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
 									</li>
