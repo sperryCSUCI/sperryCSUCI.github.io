@@ -20,10 +20,10 @@
 			}
 			.creator-image-wrapper .image {
 				display: block;
-				width: 280px; /* Reasonable fixed size */
+				width: 280px;
 				max-width: 80%;
 				margin: 0 auto;
-				border-radius: 50%; /* Optional: makes it a nice circular headshot, consistent with many portfolio sites */
+				border-radius: 50%;
 				overflow: hidden;
 				box-shadow: 0 0 0 0.25rem rgba(144, 144, 144, 0.25);
 			}
@@ -32,7 +32,23 @@
 				height: auto;
 				display: block;
 			}
-			/* Adjust the features list to not have empty items breaking layout, but maintain structure */
+			
+			/* Remove any borders/embellishments from the background section image */
+			#intro .image {
+				border: none !important;
+				box-shadow: none !important;
+				padding: 0 !important;
+				background: none !important;
+			}
+			#intro .image img {
+				border: none !important;
+				box-shadow: none !important;
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			
+			/* Adjust the features list to not have empty items breaking layout */
 			.features {
 				display: flex;
 				justify-content: center;
@@ -41,7 +57,6 @@
 			.features li {
 				text-align: center;
 			}
-			/* Ensure empty list items don't take up extra space but keep original markup intact */
 			.features li:first-child, .features li:last-child {
 				flex: 0 0 0;
 				visibility: hidden;
@@ -52,7 +67,7 @@
 				max-width: 400px;
 			}
 			
-			/* Style for poster image container */
+			/* Style for poster image container - no borders */
 			.poster-container {
 				display: flex;
 				justify-content: center;
@@ -64,6 +79,8 @@
 				max-width: 800px;
 				height: auto;
 				display: block;
+				border: none;
+				box-shadow: none;
 			}
 			
 			/* Style for video container */
@@ -119,7 +136,7 @@
 										laser gates, and stealthily taking out enemy guards, all in the 
 										search of the Absolt Drive. </p>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+									<span class="image"><img src="images/Screenshot 2026-05-03 181701.png" alt="Sneaky McGee Game Menu" /></span>
 								</div>
 							</section>
 
@@ -134,7 +151,6 @@
 										<p></p>
 									</li>
 									<li>
-										<!-- Centered and reasonably sized image wrapper -->
 										<div class="creator-image-wrapper">
 											<span class="image"><img src="images/IMG_7481.jpg" alt="Samuel Perry - Creator of Sneaky McGee" /></span>
 										</div>
