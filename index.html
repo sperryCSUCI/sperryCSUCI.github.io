@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Stellar by HTML5 UP</title>
+		<title>Stealth Game Prototype - Sneaky McGee</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -50,6 +50,35 @@
 			.features li:nth-child(2) {
 				flex: 1;
 				max-width: 400px;
+			}
+			
+			/* Style for PDF poster container */
+			.poster-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 2em 0;
+			}
+			.poster-container embed, 
+			.poster-container iframe {
+				width: 100%;
+				max-width: 800px;
+				height: 600px;
+				border: none;
+			}
+			
+			/* Style for video container */
+			.video-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 2em 0;
+			}
+			.video-container iframe {
+				width: 100%;
+				max-width: 800px;
+				height: 450px;
+				border: none;
 			}
 		</style>
 	</head>
@@ -120,19 +149,29 @@
 								</ul>
 							</section>
 
-						<!-- Second Section -->
+						<!-- Second Section - Capstone Poster -->
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>Capstone Poster</h2>
 								</header>
+								<div class="poster-container">
+									<embed src="images/Poster_SAMUELPERRY.pdf" type="application/pdf" />
+								</div>
 							</section>
 
-						<!-- Get Started -->
+						<!-- Video Demonstration -->
 							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Video Demonstration</h2>
 								</header>
-								<!-- ALL BUTTONS REMOVED -->
+								<div class="video-container">
+									<iframe 
+										src="https://www.youtube.com/embed/OoEnD7boJM8" 
+										title="Sneaky McGee Gameplay Demo"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+										allowfullscreen>
+									</iframe>
+								</div>
 							</section>
 
 					</div>
