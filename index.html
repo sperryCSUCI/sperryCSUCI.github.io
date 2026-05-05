@@ -34,11 +34,24 @@
 			}
 			
 			/* Remove any borders/embellishments from the background section image */
+			#intro .spotlight {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			#intro .content {
+				flex: 1;
+				padding-right: 2em;
+			}
 			#intro .image {
+				flex: 0 0 auto;
+				width: 40%;
 				border: none !important;
 				box-shadow: none !important;
 				padding: 0 !important;
 				background: none !important;
+				border-radius: 0 !important;
 			}
 			#intro .image img {
 				border: none !important;
@@ -46,6 +59,7 @@
 				display: block;
 				width: 100%;
 				height: auto;
+				border-radius: 0 !important;
 			}
 			
 			/* Adjust the features list to not have empty items breaking layout */
